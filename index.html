@@ -89,7 +89,7 @@
       <div class="insight-text" id="insightBody">초기 자료는 조선성, 자연, 문예적 삽화가 중심입니다. 이후 시기와 비교하기 위한 기준점으로 볼 수 있습니다.</div>
       <div class="image-slot" id="imageSlot">
         <div class="image-slot-title">세로형 이미지 삽입 영역</div>
-        <div class="image-slot-desc">3:4 또는 9:16 비율의 세로 이미지를 img src="1929_01.png 로 넣어주세요</div>
+        <div class="image-slot-desc">3:4 또는 9:16 비율의 세로 이미지를 &lt;img src="1929_01.png"&gt;로 넣어주세요</div>
       </div>
       <div class="stats" id="stats"></div>
       <div class="sample" id="sampleBox"><b>선택 자료</b>점을 클릭하면 visible_text와 코딩 정보를 볼 수 있습니다.</div>
@@ -243,7 +243,7 @@ function handleImageError(imgEl){
     `<div class="image-slot-title">세로형 이미지 삽입 영역</div><div class="image-slot-desc">${path} 파일을 찾을 수 없습니다. 최종 폴더에 해당 파일을 넣어주세요.</div>`;
 }
 function updateYearImage(year){
-  const imgPath = `최종/${year}_01.png`;
+  const imgPath = `${year}_01.png`;
   document.getElementById('imageSlot').innerHTML =
     `<img src="${imgPath}" alt="${year}년 대표 이미지" onerror="handleImageError(this)">`;
 }
