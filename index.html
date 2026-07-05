@@ -243,7 +243,7 @@ function handleImageError(imgEl){
     `<div class="image-slot-title">세로형 이미지 삽입 영역</div><div class="image-slot-desc">${path} 파일을 찾을 수 없습니다. 최종 폴더에 해당 파일을 넣어주세요.</div>`;
 }
 function updateYearImage(year){
-  const imgPath = `최종/${year}_01.png`;
+  const imgPath = `/${year}_01.png`;
   document.getElementById('imageSlot').innerHTML =
     `<img src="${imgPath}" alt="${year}년 대표 이미지" onerror="handleImageError(this)">`;
 }
